@@ -34,6 +34,9 @@
         <p v-if="true">This is visible.</p>
         <p v-else-if="false">This is not visible.</p>
         <p v-else>This is not visible.</p>
+        <p v-for="luckyNumber in luckyNumbers" v-show="false">
+          {{luckyNumber}}
+        </p>
       </main>
       <footer>
         <p>&copy; 2025</p>
@@ -46,13 +49,20 @@
         setup() {
           const name = ref('Vue.js');
           const luckyNumber = ref(7);
+          const luckyNumbers = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
           const portfolioUrl = ref('https://heghine-app.netlify.app/');
 
           function getRandomLuckyNumber() {
             return Math.floor(Math.random() * 10) + 1;
           }
 
-          return { name, luckyNumber, getRandomLuckyNumber, portfolioUrl };
+          return {
+            name,
+            luckyNumber,
+            getRandomLuckyNumber,
+            portfolioUrl,
+            luckyNumbers,
+          };
         },
       }).mount('#app');
     </script>
