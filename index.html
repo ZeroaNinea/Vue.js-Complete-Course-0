@@ -17,6 +17,7 @@
         <p>
           I'm about to learn
           <a href="https://vuejs.org/" target="_blank">Vue.js</a>!
+          {{luckyNumber}}
         </p>
       </main>
       <footer>
@@ -29,7 +30,9 @@
       createApp({
         setup() {
           const name = ref('Vue.js');
-          return { name };
+          const luckyNumber = ref(7);
+
+          return { name, luckyNumber };
         },
       }).mount('#app');
     </script>
