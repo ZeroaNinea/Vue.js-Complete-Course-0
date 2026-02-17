@@ -19,7 +19,10 @@
           <a href="https://vuejs.org/" target="_blank">Vue.js</a>!
           {{luckyNumber}}
         </p>
-        <p>This is a random number: {{getRandomLuckyNumber()}}</p>
+        <p>
+          This is a random number:
+          <span v-text="getRandomLuckyNumber()"></span>
+        </p>
       </main>
       <footer>
         <p>&copy; 2025</p>
