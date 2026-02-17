@@ -24,3 +24,20 @@ footer {
   font-size: 0.8em;
   color: #656e77;
 }
+
+.button {
+  background-color: #42b883;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  color: #fff;
+  border: none;
+}
+
+.button:hover {
+  background-color: #4ad496;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #36976c;
+}

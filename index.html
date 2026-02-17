@@ -37,6 +37,7 @@
         <p v-for="(luckyNumber, index) in luckyNumbers" v-show="false">
           {{index}}-{{luckyNumber}}
         </p>
+        <button v-on:click="click" class="button">Click</button>
       </main>
       <footer>
         <p>&copy; 2025</p>
@@ -56,12 +57,17 @@
             return Math.floor(Math.random() * 10) + 1;
           }
 
+          function click() {
+            alert('You clicked the button!');
+          }
+
           return {
             name,
             luckyNumber,
             getRandomLuckyNumber,
             portfolioUrl,
             luckyNumbers,
+            click,
           };
         },
       }).mount('#app');
