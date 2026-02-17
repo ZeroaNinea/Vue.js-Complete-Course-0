@@ -38,6 +38,11 @@
           {{index}}-{{luckyNumber}}
         </p>
         <button v-on:click="click" class="button">Click</button>
+        <div>
+          <input type="text" v-model="name" />
+          <input type="text" v-model="age" />
+          <p>Name is {{name}}, age is {{age}}.</p>
+        </div>
       </main>
       <footer>
         <p>&copy; 2025</p>
@@ -48,10 +53,11 @@
 
       createApp({
         setup() {
-          const name = ref('Vue.js');
+          let name = ref('Vue.js');
           const luckyNumber = ref(7);
           const luckyNumbers = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
           const portfolioUrl = ref('https://heghine-app.netlify.app/');
+          let age = ref(20);
 
           function getRandomLuckyNumber() {
             return Math.floor(Math.random() * 10) + 1;
@@ -68,6 +74,7 @@
             portfolioUrl,
             luckyNumbers,
             click,
+            age,
           };
         },
       }).mount('#app');
