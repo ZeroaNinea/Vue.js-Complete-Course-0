@@ -9,3 +9,4 @@ This repository contains the #0 part of the complete Vue.js course.
 ## All Parts
 
 - [Vue.js Complete Course 1](https://github.com/ZeroaNinea/Vue.js-Complete-Course-1)
+- [Vue.js Complete Course 2](https://github.com/ZeroaNinea/Vue.js-Complete-Course-2)
